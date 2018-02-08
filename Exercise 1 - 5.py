@@ -21,8 +21,7 @@ def sec_hour_convert(sec):
 #Importing the data to be used in Exercise 1
 data = np.loadtxt(fname='/Users/nikourriola/Desktop/Research/Workshop1/MG1655 Chloramphenicol 10 Feb averages simplified sheet.csv', delimiter=',')
 
-#Uncomment these for the main answers to the exercise.
-'''
+
 row1 = data[0,:]
 
 
@@ -34,11 +33,9 @@ print(row1[109,])
 time = row1
 
 sec_hour_convert(time[109,])
-'''
-
-
 #Answer:  There are  23.9502777778 hour(s) in  86221.0 seconds
 
+'''
 #Exercise 2-1
 def counterup(n):
     x_values = np.array([])
@@ -56,6 +53,66 @@ def y(x):
     return poly
 #Answer:
 print('The inputs are ', x_values, 'The output of x^3-2x^2+4 is ', y(x_values) )
+'''
+
+'''
+#Exercise 2-2
+matrix_3_3 = np.random.rand(3,3)
+vector = np.random.rand(3,1)
+
+matrix_3_1 = np.dot(matrix_3_3, vector)
+
+#print('matrix_3_3 = ', matrix_3_3)
+#print('vector = ', vector)
+#print('matrix (dot) vector = ', matrix_3_1)
+#print('column 1 of matrix_3_3 = ', matrix_3_3[:,0])
+#print('row 1 of matrix_3_3 = ', matrix_3_3[0,:])
+
+'''
+
+#Exercise 3
+#example_growth_curve = data[1,:]
+
+#plt.plot(time, example_growth_curve)
+#plt.xlabel('Time (hours)')
+#plt.ylabel('Absorbance')
+
+#plt.show()
+
+#A plot of all rows of data in 1 plot with properly labeled legend
+for i in range(1,7):
+    rows = np.array(data[i,:])
+    label_data = ('Row ' + str(i))
+    plt.plot(time,rows, label = label_data)
+    
+plt.legend(loc = 'best')
+plt.xlabel('Time(hours)')
+plt.xlabel('Absorbance')
+    
+plt.show()
+
+
+
+'''
+#One plot for each row of data
+for i in range(1,7):
+    rows = np.array(data[i,:])
+    plt.plot(time,rows)
+    plt.xlabel('Time(hours)')
+    plt.xlabel('Absorbance')
+    
+    plt.show()
+
+'''
+
+
+
+    
+
+
+
+
+
 
 
 
