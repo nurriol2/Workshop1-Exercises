@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt 
-
+import scipy as sci
+import math
 
 
 #Exercise 1
@@ -70,7 +71,7 @@ matrix_3_1 = np.dot(matrix_3_3, vector)
 
 '''
 
-#Exercise 3
+#Exercise 3 & Exercise 4
 #example_growth_curve = data[1,:]
 
 #plt.plot(time, example_growth_curve)
@@ -104,6 +105,10 @@ for i in range(1,7):
     plt.show()
 
 '''
+
+#Exercise 5
+
+#from sci.optimize import curve_fit
 
 
 
