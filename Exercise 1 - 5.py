@@ -128,10 +128,10 @@ from scipy.optimize import curve_fit
 
 def func(time_data):
     k = 1.4
-    c = 0
+    c = 0.1
     #p_0 = 0.001
-    p_0 = 0.01
-    r = .25
+    p_0 = 0.001
+    r = 1
     
     y = np.array([])
     
@@ -149,7 +149,7 @@ def func(time_data):
 
 func(sec_hour_convert(row1))
 
-curve_fit()
+#curve_fit()
 
 
 
